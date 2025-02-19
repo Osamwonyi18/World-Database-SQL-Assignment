@@ -19,16 +19,10 @@
 ✅ **Objective**: Find the number of cities in the United States.  
 ✅ **Technique**: `GROUP BY` groups cities by country name.  
 
-```sql
-SELECT COUNT(ci.id) AS CityCount, c.Name  
-FROM city AS ci  
-JOIN country AS c ON ci.CountryCode = c.Code  
-WHERE c.name = 'United States'  
-GROUP BY c.Name;
-```
 
-🖼️ *Placeholder for Image:*  
-`![GROUP BY Example](https://via.placeholder.com/600x300?text=GROUP+BY+Example)`
+ 
+![Q1](https://github.com/user-attachments/assets/cfea8528-c38f-4527-af54-733574a6a3cc)
+
 
 ---
 
@@ -36,15 +30,8 @@ GROUP BY c.Name;
 ✅ **Objective**: Find the country with the **highest life expectancy**.  
 ✅ **Technique**: `ORDER BY` sorts results, and `LIMIT` selects the top entry.  
 
-```sql
-SELECT Name, LifeExpectancy  
-FROM country  
-ORDER BY LifeExpectancy DESC  
-LIMIT 1;
-```
+![Q2](https://github.com/user-attachments/assets/a844b51a-77c5-49e0-ab20-3db65ced4e4c)
 
-🖼️ *Placeholder for Image:*  
-`![LIMIT Example](https://via.placeholder.com/600x300?text=LIMIT+Example)`
 
 ---
 
@@ -52,13 +39,8 @@ LIMIT 1;
 ✅ **Objective**: Find **cities that contain 'New'** in their name.  
 ✅ **Technique**: `LIKE '%New%'` matches any city name containing 'New'.  
 
-```sql
-SELECT * FROM CITY  
-WHERE Name LIKE '%New%';
-```
+![Q3](https://github.com/user-attachments/assets/ee2b3ccc-8c18-4a3c-9342-46e5e80f06ce)
 
-🖼️ *Placeholder for Image:*  
-`![Wildcard Example](https://via.placeholder.com/600x300?text=LIKE+Wildcard+Example)`
 
 ---
 
@@ -66,16 +48,8 @@ WHERE Name LIKE '%New%';
 ✅ **Objective**: Retrieve the **capital of Spain** by joining `country` and `city` tables.  
 ✅ **Technique**: `JOIN` matches country capital IDs with city IDs.  
 
-```sql
-SELECT DISTINCT c.name, ci.name  
-FROM country AS c  
-JOIN city AS ci  
-ON c.Capital = ci.id  
-WHERE c.name = 'Spain';
-```
+![Q13](https://github.com/user-attachments/assets/a0993abe-cbbc-4445-adb1-c8b33099b0c7)
 
-🖼️ *Placeholder for Image:*  
-`![JOIN Example](https://via.placeholder.com/600x300?text=JOIN+Example)`
 
 ---
 
